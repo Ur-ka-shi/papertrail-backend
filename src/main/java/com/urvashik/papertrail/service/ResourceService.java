@@ -50,4 +50,9 @@ public class ResourceService {
     public List<ResourceRequest> getPendingRequests() {
         return requestRepository.findByStatus("PENDING");
     }
+
+    // 🚀 NEW: Expose database drop mechanism for student request records
+    public void deleteRequest(Long id) {
+        requestRepository.deleteById(id);
+    }
 }
