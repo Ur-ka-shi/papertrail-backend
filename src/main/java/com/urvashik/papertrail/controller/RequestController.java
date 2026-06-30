@@ -13,8 +13,8 @@ import com.urvashik.papertrail.entity.ResourceRequest;
 import com.urvashik.papertrail.service.ResourceService;
 
 @RestController
-@RequestMapping("/requests")
-@CrossOrigin(origins = "http://localhost:3000") // Allows your React app to securely query these endpoints
+@RequestMapping("/resources")
+@CrossOrigin(origins = "*")  // Allows your React app to securely query these endpoints
 public class RequestController {
 
     private final ResourceService resourceService;
